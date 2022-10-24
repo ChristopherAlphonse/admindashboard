@@ -1,17 +1,17 @@
 # https://help.github.com/github/administering-a-repository/configuration-options-for-dependency-updates
 version: 2
 updates:
-  - package-ecosystem: "pip"
-    directory: "/"
+  - package-ecosystem: "yarn"
+    directory: "/client"
     schedule:
       interval: "weekly"
-      day: "friday"
+      day: "monday"
     open-pull-requests-limit: 5
     target-branch: "master"
-  - package-ecosystem: "npm"
-    directory: "/searx/static/themes/simple"
+  - package-ecosystem: "yarn"
+    directory: "/server"
     schedule:
       interval: "weekly"
-      day: "friday"
+      day: "tuesday"
     open-pull-requests-limit: 5
     target-branch: "master"
