@@ -25,14 +25,14 @@ import { SET_LOGIN } from "./redux/features/auth/authSlice";
 
 axios.defaults.withCredentials = true;
 
-function App() {
+const App = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    async function loginStatus() {
+    const loginStatus = async () => {
       const status = await getLoginStatus();
       dispatch(SET_LOGIN(status));
-    }
+    };
     loginStatus();
   }, [dispatch]);
 
@@ -119,6 +119,6 @@ function App() {
       </Routes>
     </BrowserRouter>
   );
-}
+};
 
 export default App;
