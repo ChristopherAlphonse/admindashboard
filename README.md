@@ -36,9 +36,7 @@
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
+
   </ol>
 </details>
 
@@ -93,7 +91,7 @@ Open your terminal and sure node and nodemon is installed and up to date
 
 ## Usage
 
-Usage lof this repo or software will help provide a greater understand for error handling, password resetting, and creating and deleting users from a database.
+Usage of this repo or software will help provide a greater understand for error handling, password resetting, and creating and deleting users from a database.
 
 <!-- _For more examples, please refer to the [Documentation](https://example.com)_ -->
 
