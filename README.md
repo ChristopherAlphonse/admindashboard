@@ -14,9 +14,6 @@
     <a href="https://github.com/ChristopherAlphonse/admindashboard"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    ←
-    <a href="hhttps://github.com/ChristopherAlphonse/admindashboard/issues">Report Bug</a>
-    →
   
   </p>
 </div>
