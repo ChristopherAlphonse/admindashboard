@@ -102,4 +102,4 @@ Usage of this repo or software will help provide a greater understand for error 
 [mongo]: ./example/icons/mongo_icon.png
 [redux]: ./example/icons/redux.png
 [sass]: ./example/icons/sass.png
-[product-screenshot]: ./Client/src/assets/loader.gif
+[product-screenshot]: ./Client/src/assets/logo.png
