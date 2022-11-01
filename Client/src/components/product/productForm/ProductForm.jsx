@@ -14,6 +14,12 @@ const ProductForm = ({
   handleImageChange,
   saveProduct,
 }) => {
+  const reloadPage = () => {
+    setTimeout(function () {
+      window.location.reload();
+    }, 23);
+  };
+
   return (
     <div className="add-product">
       <Card cardClass={"card"}>
@@ -83,7 +89,11 @@ const ProductForm = ({
           />
 
           <div className="--my">
-            <button type="submit" className="--btn --btn-primary">
+            <button
+              type="submit"
+              className="--btn --btn-primary"
+              onClick={reloadPage}
+            >
               Save Product
             </button>
           </div>
