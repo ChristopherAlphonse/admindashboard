@@ -1,4 +1,4 @@
- import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./auth.module.scss";
 import { AiOutlineLogin } from "react-icons/ai";
 import Card from "../../components/card/Card";
@@ -45,6 +45,7 @@ const Login = () => {
     try {
       const data = await loginUser(userData);
       console.log(data);
+
       dispatch(SET_LOGIN(true));
       dispatch(SET_NAME(data.name));
       navigate("/dashboard");
@@ -87,7 +88,11 @@ const Login = () => {
               value={password}
               onChange={handleInputChange}
             />
-            <button type="submit" className="--btn --btn-primary --btn-block">
+            <button
+              type="submit"
+              className="--btn --btn-primary --btn-block"
+              onClick={refreshPage}
+            >
               Login
             </button>
           </form>

@@ -13,12 +13,12 @@ const initialState = {
 
 const ChangePassword = () => {
   const navigate = useNavigate();
-  const [formData, setformData] = useState(initialState);
+  const [formData, setFormData] = useState(initialState);
   const { oldPassword, password, password2 } = formData;
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-    setformData({ ...formData, [name]: value });
+    setFormData({ ...formData, [name]: value });
   };
 
   const changePass = async (e) => {

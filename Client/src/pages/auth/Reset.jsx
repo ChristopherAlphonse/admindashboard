@@ -12,14 +12,14 @@ const initialState = {
 };
 
 const Reset = () => {
-  const [formData, setformData] = useState(initialState);
+  const [formData, setFormData] = useState(initialState);
   const { password, password2 } = formData;
 
   const { resetToken } = useParams();
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-    setformData({ ...formData, [name]: value });
+    setFormData({ ...formData, [name]: value });
   };
 
   const reset = async (e) => {
