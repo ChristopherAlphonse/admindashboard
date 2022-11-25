@@ -1,27 +1,26 @@
-import { useEffect } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./pages/Home/Home";
+import "react-toastify/dist/ReactToastify.css";
 
-import { Login, Register, Forgot, Reset } from "./pages/auth/AuthIndex";
 import {
   AddProduct,
+  Contact,
   Dashboard,
   EditProduct,
   EditProfile,
-  Contact,
   Profile,
 } from "./pages/PagesIndex";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Forgot, Login, Register, Reset } from "./pages/auth/AuthIndex";
 
-import ProductDetail from "./components/product/productDetail/ProductDetail";
-import Sidebar from "./components/sidebar/Sidebar";
+import Home from "./pages/Home/Home";
 import Layout from "./components/layout/Layout";
-
-import axios from "axios";
-import { ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-import { useDispatch } from "react-redux";
-import { getLoginStatus } from "./services/authService";
+import ProductDetail from "./components/product/productDetail/ProductDetail";
 import { SET_LOGIN } from "./redux/features/auth/authSlice";
+import Sidebar from "./components/sidebar/Sidebar";
+import { ToastContainer } from "react-toastify";
+import axios from "axios";
+import { getLoginStatus } from "./services/authService";
+import { useDispatch } from "react-redux";
+import { useEffect } from "react";
 
 axios.defaults.withCredentials = true;
 

@@ -1,4 +1,4 @@
-const dotenv = require("dotenv").config();
+require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
@@ -45,7 +45,7 @@ mongoose
   })
   .then(() => {
     app.listen(PORT, () => {
-      console.log(`Server Running on port ${PORT} & ${MSG}`);
+      console.log(`Server Running on port 🚀 ${PORT} & ${MSG}`);
     });
   })
   .catch((err) => console.log(err));

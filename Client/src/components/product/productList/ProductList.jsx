@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { SpinnerImg } from "../../loader/Loader";
+
 import "./productList.scss";
 import { FaEdit, FaTrashAlt } from "react-icons/fa";
 import { AiOutlineEye } from "react-icons/ai";
@@ -17,6 +17,11 @@ import {
   getProducts,
 } from "../../../redux/features/product/productSlice";
 import { Link } from "react-router-dom";
+
+import { BarLoader } from "react-spinners";
+
+const color = "#ff4500";
+const Loader = <BarLoader color={color} speedMultiplier={2} />;
 
 const ProductList = ({ products, isLoading }) => {
   const [search, setSearch] = useState("");
@@ -94,7 +99,7 @@ const ProductList = ({ products, isLoading }) => {
           </span>
         </div>
 
-        {isLoading && <SpinnerImg />}
+        {isLoading && <Loader />}
 
         <div className="table">
           {!isLoading && products.length === 0 ? (

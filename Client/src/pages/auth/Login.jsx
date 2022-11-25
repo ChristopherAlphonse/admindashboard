@@ -7,7 +7,11 @@ import { useDispatch } from "react-redux";
 import { toast } from "react-toastify";
 import { loginUser, validateEmail } from "../../services/authService";
 import { SET_LOGIN, SET_NAME } from "../../redux/features/auth/authSlice";
-import Loader from "../../components/loader/Loader";
+
+import { BarLoader } from "react-spinners";
+
+const color = "#ff4500";
+const Loader = <BarLoader color={color} speedMultiplier={2} />;
 
 const initialState = {
   email: "",
@@ -88,11 +92,7 @@ const Login = () => {
               value={password}
               onChange={handleInputChange}
             />
-            <button
-              type="submit"
-              className="--btn --btn-primary --btn-block"
-              onClick={refreshPage}
-            >
+            <button type="submit" className="--btn --btn-primary --btn-block">
               Login
             </button>
           </form>

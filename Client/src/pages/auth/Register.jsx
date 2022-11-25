@@ -6,8 +6,15 @@ import { toast } from "react-toastify";
 import { registerUser, validateEmail } from "../../services/authService";
 import { useDispatch } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
+
 import { SET_LOGIN, SET_NAME } from "../../redux/features/auth/authSlice";
-import Loader from "../../components/loader/Loader";
+
+
+
+import { BarLoader } from "react-spinners";
+
+const color = "#ff4500";
+const Loader = <BarLoader color={color} speedMultiplier={2} />;
 
 const initialState = {
   name: "",

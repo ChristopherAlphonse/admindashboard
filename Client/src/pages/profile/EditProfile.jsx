@@ -2,7 +2,12 @@ import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import Card from "../../components/card/Card";
-import Loader from "../../components/loader/Loader";
+
+import { BarLoader } from "react-spinners";
+
+const color = "#ff4500";
+const Loader = <BarLoader color={color} speedMultiplier={2} />;
+
 import { selectUser } from "../../redux/features/auth/authSlice";
 import "./Profile.scss";
 import { toast } from "react-toastify";

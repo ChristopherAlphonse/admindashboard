@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router-dom";
-import Loader from "../../components/loader/Loader";
+
 import ProductForm from "../../components/product/productForm/ProductForm";
 import {
   getProduct,
@@ -10,6 +10,11 @@ import {
   selectProduct,
   updateProduct,
 } from "../../redux/features/product/productSlice";
+
+import { BarLoader } from "react-spinners";
+
+const color = "#ff4500";
+const Loader = <BarLoader color={color} speedMultiplier={2} />;
 
 const EditProduct = () => {
   const { id } = useParams();
