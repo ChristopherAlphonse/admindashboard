@@ -1,8 +1,9 @@
-import React from "react";
+import { SET_LOGIN, selectName } from "../../redux/features/auth/authSlice";
 import { useDispatch, useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
-import { selectName, SET_LOGIN } from "../../redux/features/auth/authSlice";
+
+import React from "react";
 import { logoutUser } from "../../services/authService";
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
   const dispatch = useDispatch();

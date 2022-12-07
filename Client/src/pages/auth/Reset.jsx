@@ -1,10 +1,11 @@
-import React, { useState } from "react";
-import styles from "./auth.module.scss";
-import { MdPassword } from "react-icons/md";
-import Card from "../../components/card/Card";
 import { Link, useParams } from "react-router-dom";
-import { toast } from "react-toastify";
+import React, { useState } from "react";
+
+import Card from "../../components/card/Card";
+import { MdPassword } from "react-icons/md";
 import { resetPassword } from "../../services/authService";
+import styles from "./auth.module.scss";
+import { toast } from "react-toastify";
 
 const initialState = {
   password: "",

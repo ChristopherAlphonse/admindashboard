@@ -1,24 +1,24 @@
-import React, { useEffect, useState } from "react";
-
 import "./productList.scss";
-import { FaEdit, FaTrashAlt } from "react-icons/fa";
-import { AiOutlineEye } from "react-icons/ai";
-import Search from "../../search/Search";
-import { useDispatch, useSelector } from "react-redux";
+import "react-confirm-alert/src/react-confirm-alert.css";
+
 import {
   FILTER_PRODUCTS,
   selectFilteredPoducts,
 } from "../../../redux/features/product/filterSlice";
-import ReactPaginate from "react-paginate";
-import { confirmAlert } from "react-confirm-alert";
-import "react-confirm-alert/src/react-confirm-alert.css";
+import { FaEdit, FaTrashAlt } from "react-icons/fa";
+import React, { useEffect, useState } from "react";
 import {
   deleteProduct,
   getProducts,
 } from "../../../redux/features/product/productSlice";
-import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
 
+import { AiOutlineEye } from "react-icons/ai";
 import { BarLoader } from "react-spinners";
+import { Link } from "react-router-dom";
+import ReactPaginate from "react-paginate";
+import Search from "../../search/Search";
+import { confirmAlert } from "react-confirm-alert";
 
 const color = "#ff4500";
 const Loader = <BarLoader color={color} speedMultiplier={2} />;

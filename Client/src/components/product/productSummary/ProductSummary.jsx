@@ -1,10 +1,6 @@
-import React, { useEffect } from "react";
 import "./ProductSummary.scss";
-import { AiFillDollarCircle } from "react-icons/ai";
+
 import { BsCart4, BsCartX } from "react-icons/bs";
-import { BiCategory } from "react-icons/bi";
-import InfoBox from "../../infoBox/InfoBox";
-import { useDispatch, useSelector } from "react-redux";
 import {
   CALC_CATEGORY,
   CALC_OUTOFSTOCK,
@@ -13,6 +9,12 @@ import {
   selectOutOfStock,
   selectTotalStoreValue,
 } from "../../../redux/features/product/productSlice";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+
+import { AiFillDollarCircle } from "react-icons/ai";
+import { BiCategory } from "react-icons/bi";
+import InfoBox from "../../infoBox/InfoBox";
 
 // Icons
 const earningIcon = <AiFillDollarCircle size={20} color="#fff" />;

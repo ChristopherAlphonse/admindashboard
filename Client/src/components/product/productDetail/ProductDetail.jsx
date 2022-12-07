@@ -1,15 +1,15 @@
+import "./ProductDetail.scss";
+
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useParams } from "react-router-dom";
-import useRedirectLoggedOutUser from "../../../customHook/useRedirectLoggedOutUser";
-import { selectIsLoggedIn } from "../../../redux/features/auth/authSlice";
-import { getProduct } from "../../../redux/features/product/productSlice";
-import Card from "../../card/Card";
-
-import "./ProductDetail.scss";
-import DOMPurify from "dompurify";
 
 import { BarLoader } from "react-spinners";
+import Card from "../../card/Card";
+import DOMPurify from "dompurify";
+import { getProduct } from "../../../redux/features/product/productSlice";
+import { selectIsLoggedIn } from "../../../redux/features/auth/authSlice";
+import { useParams } from "react-router-dom";
+import useRedirectLoggedOutUser from "../../../customHook/useRedirectLoggedOutUser";
 
 const color = "#ff4500";
 const Loader = <BarLoader color={color} speedMultiplier={2} />;

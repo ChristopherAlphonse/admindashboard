@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import styles from "./auth.module.scss";
+import { forgotPassword, validateEmail } from "../../services/authService";
+
 import { AiOutlineMail } from "react-icons/ai";
 import Card from "../../components/card/Card";
 import { Link } from "react-router-dom";
-import { forgotPassword, validateEmail } from "../../services/authService";
+import styles from "./auth.module.scss";
 import { toast } from "react-toastify";
 
 const Forgot = () => {

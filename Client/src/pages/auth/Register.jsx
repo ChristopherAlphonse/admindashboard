@@ -1,17 +1,14 @@
-import React, { useState } from "react";
-import styles from "./auth.module.scss";
-import { FaUserAstronaut } from "react-icons/fa";
-import Card from "../../components/card/Card";
-import { toast } from "react-toastify";
-import { registerUser, validateEmail } from "../../services/authService";
-import { useDispatch } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
-
+import React, { useState } from "react";
 import { SET_LOGIN, SET_NAME } from "../../redux/features/auth/authSlice";
-
-
+import { registerUser, validateEmail } from "../../services/authService";
 
 import { BarLoader } from "react-spinners";
+import Card from "../../components/card/Card";
+import { FaUserAstronaut } from "react-icons/fa";
+import styles from "./auth.module.scss";
+import { toast } from "react-toastify";
+import { useDispatch } from "react-redux";
 
 const color = "#ff4500";
 const Loader = <BarLoader color={color} speedMultiplier={2} />;

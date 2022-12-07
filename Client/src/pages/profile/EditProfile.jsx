@@ -1,18 +1,19 @@
+import "./Profile.scss";
+
 import React, { useEffect, useState } from "react";
-import { useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
-import Card from "../../components/card/Card";
 
 import { BarLoader } from "react-spinners";
+import Card from "../../components/card/Card";
+import ChangePassword from "../../components/changePassword/ChangePassword";
+import { selectUser } from "../../redux/features/auth/authSlice";
+import { toast } from "react-toastify";
+import { updateUser } from "../../services/authService";
+import { useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const color = "#ff4500";
 const Loader = <BarLoader color={color} speedMultiplier={2} />;
 
-import { selectUser } from "../../redux/features/auth/authSlice";
-import "./Profile.scss";
-import { toast } from "react-toastify";
-import { updateUser } from "../../services/authService";
-import ChangePassword from "../../components/changePassword/ChangePassword";
 
 const EditProfile = () => {
   const navigate = useNavigate();

@@ -1,13 +1,13 @@
 import React, { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
-import ProductForm from "../../components/product/productForm/ProductForm";
 import {
   createProduct,
   selectIsLoading,
 } from "../../redux/features/product/productSlice";
+import { useDispatch, useSelector } from "react-redux";
 
 import { BarLoader } from "react-spinners";
+import ProductForm from "../../components/product/productForm/ProductForm";
+import { useNavigate } from "react-router-dom";
 
 const color = "#ff4500";
 const Loader = <BarLoader color={color} speedMultiplier={2} />;

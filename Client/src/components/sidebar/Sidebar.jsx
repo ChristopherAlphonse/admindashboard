@@ -1,9 +1,10 @@
-import React, { useState } from "react";
 import "./Sidebar.scss";
 
-import menu from "../../data/sidebar";
-import SidebarItem from "./SidebarItem";
+import React, { useState } from "react";
+
 import { AiOutlineExclamationCircle } from "react-icons/ai";
+import SidebarItem from "./SidebarItem";
+import menu from "../../data/sidebar";
 
 const Sidebar = ({ children }) => {
   const [isOpen, setIsOpen] = useState(true);

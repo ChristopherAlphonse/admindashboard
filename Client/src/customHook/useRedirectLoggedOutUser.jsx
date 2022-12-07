@@ -1,9 +1,9 @@
-import  { useEffect } from "react";
-import { useDispatch } from "react-redux";
-import { useNavigate } from "react-router-dom";
 import { SET_LOGIN } from "../redux/features/auth/authSlice";
 import { getLoginStatus } from "../services/authService";
 import { toast } from "react-toastify";
+import { useDispatch } from "react-redux";
+import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 const useRedirectLoggedOutUser = (path) => {
   const navigate = useNavigate();

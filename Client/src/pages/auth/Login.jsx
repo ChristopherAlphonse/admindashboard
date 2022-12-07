@@ -1,14 +1,14 @@
-import React, { useState, useEffect } from "react";
-import styles from "./auth.module.scss";
-import { AiOutlineLogin } from "react-icons/ai";
-import Card from "../../components/card/Card";
 import { Link, useNavigate } from "react-router-dom";
-import { useDispatch } from "react-redux";
-import { toast } from "react-toastify";
-import { loginUser, validateEmail } from "../../services/authService";
+import React, { useEffect, useState } from "react";
 import { SET_LOGIN, SET_NAME } from "../../redux/features/auth/authSlice";
+import { loginUser, validateEmail } from "../../services/authService";
 
+import { AiOutlineLogin } from "react-icons/ai";
 import { BarLoader } from "react-spinners";
+import Card from "../../components/card/Card";
+import styles from "./auth.module.scss";
+import { toast } from "react-toastify";
+import { useDispatch } from "react-redux";
 
 const color = "#ff4500";
 const Loader = <BarLoader color={color} speedMultiplier={2} />;

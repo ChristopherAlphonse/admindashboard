@@ -1,17 +1,18 @@
+import "./Profile.scss";
+
+import { SET_NAME, SET_USER } from "../../redux/features/auth/authSlice";
 import { useEffect, useState } from "react";
-import { useDispatch } from "react-redux";
-import { Link } from "react-router-dom";
-import Card from "../../components/card/Card";
 
 import { BarLoader } from "react-spinners";
+import Card from "../../components/card/Card";
+import { Link } from "react-router-dom";
+import { getUser } from "../../services/authService";
+import { useDispatch } from "react-redux";
+import useRedirectLoggedOutUser from "../../customHook/useRedirectLoggedOutUser";
 
 const color = "#ff4500";
 const Loader = <BarLoader color={color} speedMultiplier={2} />;
 
-import useRedirectLoggedOutUser from "../../customHook/useRedirectLoggedOutUser";
-import { SET_NAME, SET_USER } from "../../redux/features/auth/authSlice";
-import { getUser } from "../../services/authService";
-import "./Profile.scss";
 
 const Profile = () => {
   useRedirectLoggedOutUser("/login");

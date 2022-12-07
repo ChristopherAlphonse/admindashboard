@@ -1,11 +1,13 @@
-import React, { useState } from "react";
-import Card from "../../components/card/Card";
 import "./Contact.scss";
-import { FaPhoneAlt, FaEnvelope,FaGlobe } from "react-icons/fa";
-import { GoLocation } from "react-icons/go";
-import { toast } from "react-toastify";
-import axios from "axios";
+
+import { FaEnvelope, FaGlobe, FaPhoneAlt } from "react-icons/fa";
+import React, { useState } from "react";
+
 import { BACKEND_URL } from "../../services/authService";
+import Card from "../../components/card/Card";
+import { GoLocation } from "react-icons/go";
+import axios from "axios";
+import { toast } from "react-toastify";
 
 const Contact = () => {
   const [subject, setSubject] = useState("");
@@ -51,7 +53,9 @@ const Contact = () => {
               value={message}
               onChange={(e) => setMessage(e.target.value)}
             ></textarea>
-            <button className="--btn --btn-primary btn-right">Send Message</button>
+            <button className="--btn --btn-primary btn-right">
+              Send Message
+            </button>
           </Card>
         </form>
 
